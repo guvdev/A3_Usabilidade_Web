@@ -86,23 +86,26 @@ Complemento: ${complemento || "Nenhum"}
     // === Espera 2 segundos para abrir o WhatsApp ===
     setTimeout(() => {
         window.open(`https://wa.me/${telefoneLoja}?text=${texto}`, "_blank");
-    }, 2500);
+        localStorage.removeItem("carrinho");
+        localStorage.removeItem("totalCarrinho");
+        window.location.href = "index.html"; // redireciona após fechar
+    }, 3500);
 }
 
 
 function mostrarNotificacaopg(texto = "") {
-  const notif = document.getElementById("notificacaopg");
+    const notif = document.getElementById("notificacaopg");
 
-  notif.textContent = texto;
-  notif.classList.remove("hidden");
+    notif.textContent = texto;
+    notif.classList.remove("hidden");
 
-  // Reinicia animação
-  void notif.offsetWidth;
+    // Reinicia animação
+    void notif.offsetWidth;
 
-  notif.classList.add("mostrar");
+    notif.classList.add("mostrar");
 
-  setTimeout(() => {
-    notif.classList.remove("mostrar");
-    setTimeout(() => notif.classList.add("hidden"), 300);
-  }, 3000);
+    setTimeout(() => {
+        notif.classList.remove("mostrar");
+        setTimeout(() => notif.classList.add("hidden"), 300);
+    }, 3000);
 }
