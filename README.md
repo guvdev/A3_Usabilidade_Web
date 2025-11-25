@@ -64,7 +64,3 @@ Projeto desenvolvido para a disciplina de Usabilidade, aplicando princípios de 
 
 **Luiz Gustavo**  
 Projeto acadêmico para disciplina de Usabilidade e Experiência do Usuário.
-
----
-
-> *“Uma boa interface não chama atenção — ela simplesmente funciona.”* 🍔✨
