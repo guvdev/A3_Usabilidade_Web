@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniBurguer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ======================= -->
+    <!--        CABEÇALHO       -->
+    <!-- ======================= -->
+    <header>
+      <div class="container">
+        <h1 class="logo">UniBurguer</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#menu">Cardápio</a></li>
+            <a href="#carrinho" class="icone-carrinho">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="contador-carrinho" class="contador-carrinho">0</span>
+              Carrinho
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ======================= -->
+    <!--          HERO          -->
+    <!-- ======================= -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Seja Bem Vindo</h2>
+        <p>Feitos com ingredientes frescos e muito sabor.</p>
+        <a href="#menu" class="btn">Ver Cardápio</a>
+      </div>
+    </section>
+
+    <!-- ======================= -->
+    <!--         CARDÁPIO        -->
+    <!-- ======================= -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2>Nosso Cardápio</h2>
+        <div class="produtos">
+          <!-- Produto 1 -->
+          <div class="produto categoria-hamburguer">
+            <img
+              src="https://images.unsplash.com/photo-1611309454921-16cef3438ee0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Hambúrguer Clássico"
+            />
+            <h3>Hambúrguer Clássico <span class="badge">Mais vendido</span></h3>
+            <p>Carne suculenta, queijo, alface, tomate e molho especial.</p>
+            <span class="preco">R$ 25,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="produto categoria-hamburguer">
+            <img
+              src="https://images.unsplash.com/photo-1575980726530-4e673bfa0ad8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Cheese Bacon"
+            />
+            <h3>Cheese Bacon</h3>
+            <p>Pão brioche, carne artesanal, cheddar e bacon crocante.</p>
+            <span class="preco">R$ 28,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="produto categoria-hamburguer">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Hambúrguer Duplo"
+            />
+            <h3>Hambúrguer Duplo</h3>
+            <p>
+              Dois hambúrgueres, queijo duplo, alface, tomate e molho especial.
+            </p>
+            <span class="preco">R$ 35,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Bebida 0 -->
+          <div class="produto categoria-bebida">
+            <img
+              src="https://images.unsplash.com/photo-1629059042675-ce386c84cebf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Refrigerante"
+            />
+            <h3>Refrigerante 2 Litros</h3>
+            <p>Selecione um Refrigerante</p>
+            <select class="selecionar-sabor">
+              <option value="Coca-Cola">Coca-Cola</option>
+              <option value="Coca-Cola-Zero">Coca-Cola Zero</option>
+              <option value="Guaraná">Guaraná</option>
+              <option value="Guaranáz-Zero">Guaraná Zero</option>
+              <option value="Fanta-Laranja">Fanta Laranja</option>
+              <option value="Sprite">Sprite</option>
+              <option value="Sprite-Zero">Sprite Zero</option>
+            </select>
+            <span class="preco preco-bebida">R$ 10,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Bebida 1 -->
+          <div class="produto categoria-bebida">
+            <img
+              src="https://images.unsplash.com/photo-1629059042675-ce386c84cebf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="Refrigerante"
+            />
+            <h3>Refrigerante Lata</h3>
+            <p>Selecione um Refrigerante</p>
+            <select class="selecionar-sabor">
+              <option value="Coca-Cola">Coca-Cola</option>
+              <option value="Coca-Cola-Zero">Coca-Cola Zero</option>
+              <option value="Guaraná">Guaraná</option>
+              <option value="Guaraná-Zero">Guaraná Zero</option>
+              <option value="Fanta-Laranja">Fanta Laranja</option>
+              <option value="Sprite">Sprite</option>
+              <option value="Sprite-Zero">Sprite Zero</option>
+            </select>
+            <span class="preco preco-bebida">R$ 4,50</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Bebida 2 -->
+          <div class="produto categoria-bebida">
+            <img
+              src="https://static.casapino.com.br/casapino/2019/06/201906/suco-fruta-acucar-risco-morte-f107f9a0.jpg"
+              alt="Suco Natural"
+            />
+            <h3>Suco Natural</h3>
+            <p>Selecione um Suco</p>
+            <select class="selecionar-sabor">
+              <option value="Suco de Limao">Suco de Limão</option>
+              <option value="Suco de Laranja">Suco de Laranja</option>
+              <option value="Suco de Melancia">Suco de Melancia</option>
+              <option value="Suco de Uva">Suco de Uva</option>
+            </select>
+            <span class="preco preco-bebida">R$ 8,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <!-- Bebida 3 -->
+          <div class="produto categoria-bebida">
+            <img
+              src="https://mambodelivery.vtexassets.com/arquivos/ids/184965-800-450?v=637884009070200000&width=800&height=450&aspect=true"
+              alt="Água Mineral"
+            />
+            <h3>Água Mineral</h3>
+            <p>Garrafa de 500ml.</p>
+            <span class="preco">R$ 4,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="notificacao" class="notificacao hidden">
+      Produto adicionado ao carrinho!
+    </div>
+
+    <!-- ======================= -->
+    <!--     CARRINHO LATERAL    -->
+    <!-- ======================= -->
+    <aside id="carrinho-lateral" class="carrinho-lateral">
+      <button id="fechar-carrinho" class="fechar-carrinho">✕</button>
+      <h2>Seu Carrinho</h2>
+
+      <div id="lista-carrinho" class="lista-carrinho">
+        <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+      </div>
+
+      <div class="carrinho-total">
+        <span>Total:</span>
+        <strong>R$ <span id="total-carrinho">0,00</span></strong>
+      </div>
+
+      <button id="limpar-carrinho" class="btn btn-limpar">
+        Limpar Carrinho
+      </button>
+
+      <button id="finalizar-pedido" class="btn btn-finalizar finalizar-compra">
+        Finalizar Pedido
+      </button>
+    </aside>
+
+    <!-- ======================= -->
+    <!--         RODAPÉ          -->
+    <!-- ======================= -->
+    <footer>
+      <p style="margin-bottom: 1rem">
+        © 2025 <strong>UniBurguer</strong> - Todos os direitos reservados.
+      </p>
+      <p>
+        Endereço: R. Antônio Dib Mussi, 366 - Centro, Florianópolis/SC<br />
+        Telefone: (48) 3333-4455 | WhatsApp: (48) 99232-4437<br />
+        Atendimento: Segunda a Domingo - 18h a 00h<br />
+        CNPJ: 12.345.678/0001-99<br />
+        E-mail: contato@burgerhouse.com.br
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
