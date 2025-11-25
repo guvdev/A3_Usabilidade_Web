@@ -51,15 +51,15 @@
     <!-- ======================= -->
     <!--         CARDÁPIO        -->
     <!-- ======================= -->
+
     <section id="menu" class="menu-section">
       <div class="container">
-        <h2>Nosso Cardápio</h2>
+        <h2>Burguers</h2>
         <div class="produtos">
-          <!-- Produto 1 -->
+          <!-- hamburgueres: cheapest -> most expensive -->
           <div class="produto categoria-hamburguer">
             <img
               src="https://images.unsplash.com/photo-1611309454921-16cef3438ee0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Hambúrguer Clássico"
             />
             <h3>Hambúrguer Clássico <span class="badge">Mais vendido</span></h3>
             <p>Carne suculenta, queijo, alface, tomate e molho especial.</p>
@@ -69,11 +69,23 @@
             </button>
           </div>
 
-          <!-- Produto 2 -->
+          <div class="produto categoria-vegetariano">
+            <img
+              src="https://images.unsplash.com/photo-1592415499556-74fcb9f18667?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <h3>Veggie Burguer</h3>
+            <p>
+              Burguer à base de grão-de-bico, queijo vegano, rúcula e tomate.
+            </p>
+            <span class="preco">R$ 27,50</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
           <div class="produto categoria-hamburguer">
             <img
               src="https://images.unsplash.com/photo-1575980726530-4e673bfa0ad8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Cheese Bacon"
             />
             <h3>Cheese Bacon</h3>
             <p>Pão brioche, carne artesanal, cheddar e bacon crocante.</p>
@@ -83,11 +95,9 @@
             </button>
           </div>
 
-          <!-- Produto 3 -->
           <div class="produto categoria-hamburguer">
             <img
               src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Hambúrguer Duplo"
             />
             <h3>Hambúrguer Duplo</h3>
             <p>
@@ -99,34 +109,33 @@
             </button>
           </div>
 
-          <!-- Bebida 0 -->
-          <div class="produto categoria-bebida">
+      </div>
+    </section>
+
+<section id="menu" class="menu-section">
+      <div class="container">
+        <h2>Bebidas</h2>
+        <div class="produtos">
+          <!-- hamburgueres: cheapest -> most expensive -->
+         <div class="produto categoria-bebida">
             <img
-              src="https://images.unsplash.com/photo-1629059042675-ce386c84cebf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Refrigerante"
+              src="https://mambodelivery.vtexassets.com/arquivos/ids/184965-800-450?v=637884009070200000&width=800&height=450&aspect=true"
             />
-            <h3>Refrigerante 2 Litros</h3>
-            <p>Selecione um Refrigerante</p>
-            <select class="selecionar-sabor">
-              <option value="Coca-Cola">Coca-Cola</option>
-              <option value="Coca-Cola-Zero">Coca-Cola Zero</option>
-              <option value="Guaraná">Guaraná</option>
-              <option value="Guaranáz-Zero">Guaraná Zero</option>
-              <option value="Fanta-Laranja">Fanta Laranja</option>
-              <option value="Sprite">Sprite</option>
-              <option value="Sprite-Zero">Sprite Zero</option>
+            <h3>Água Mineral</h3>
+            <p>Garrafa de 500ml.</p>
+             <select class="selecionar-sabor">
+              <option value="Com Gás">Com Gás</option>
+              <option value="Sem Gás">Sem Gás</option>
             </select>
-            <span class="preco preco-bebida">R$ 10,00</span>
+            <span class="preco preco-bebida">R$ 4,00</span>
             <button class="btn adicionar-carrinho">
               Adicionar ao Carrinho
             </button>
           </div>
 
-          <!-- Bebida 1 -->
           <div class="produto categoria-bebida">
             <img
               src="https://images.unsplash.com/photo-1629059042675-ce386c84cebf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Refrigerante"
             />
             <h3>Refrigerante Lata</h3>
             <p>Selecione um Refrigerante</p>
@@ -145,11 +154,9 @@
             </button>
           </div>
 
-          <!-- Bebida 2 -->
           <div class="produto categoria-bebida">
             <img
               src="https://static.casapino.com.br/casapino/2019/06/201906/suco-fruta-acucar-risco-morte-f107f9a0.jpg"
-              alt="Suco Natural"
             />
             <h3>Suco Natural</h3>
             <p>Selecione um Suco</p>
@@ -165,22 +172,75 @@
             </button>
           </div>
 
-          <!-- Bebida 3 -->
           <div class="produto categoria-bebida">
             <img
-              src="https://mambodelivery.vtexassets.com/arquivos/ids/184965-800-450?v=637884009070200000&width=800&height=450&aspect=true"
-              alt="Água Mineral"
+              src="https://images.unsplash.com/photo-1629059042675-ce386c84cebf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0"
             />
-            <h3>Água Mineral</h3>
-            <p>Garrafa de 500ml.</p>
-            <span class="preco">R$ 4,00</span>
+            <h3>Refrigerante 2 Litros</h3>
+            <p>Selecione um Refrigerante</p>
+            <select class="selecionar-sabor">
+              <option value="Coca-Cola">Coca-Cola</option>
+              <option value="Coca-Cola-Zero">Coca-Cola Zero</option>
+              <option value="Guaraná">Guaraná</option>
+              <option value="Guaraná-Zero">Guaraná Zero</option>
+              <option value="Fanta-Laranja">Fanta Laranja</option>
+              <option value="Sprite">Sprite</option>
+              <option value="Sprite-Zero">Sprite Zero</option>
+            </select>
+            <span class="preco preco-bebida">R$ 10,00</span>
             <button class="btn adicionar-carrinho">
               Adicionar ao Carrinho
             </button>
           </div>
-        </div>
+
+
       </div>
     </section>
+    
+    <section id="menu" class="menu-section">
+          <div class="container">
+            <h2>Porções e Sobremesas</h2>
+            <div class="produtos">
+              <!-- hamburgueres: cheapest -> most expensive -->
+              <div class="produto categoria-porcao">
+            <img
+              src="https://images.unsplash.com/photo-1664337873087-ac64b3f1e454?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <h3>Batata Frita Grande</h3>
+            <p>Porção generosa de batatas crocantes, servidas com ketchup.</p>
+            <span class="preco">R$ 12,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <div class="produto categoria-porcao">
+            <img
+              src="https://images.unsplash.com/photo-1603133872575-9989ab68d24c?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <h3>Onion Rings</h3>
+            <p>Anéis de cebola empanados e fritos, crocantes e saborosos.</p>
+            <span class="preco">R$ 14,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+
+          <div class="produto categoria-sobremesa">
+            <img
+              src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <h3>Brownie com Sorvete</h3>
+            <p>Brownie quente servido com uma bola de sorvete de baunilha.</p>
+            <span class="preco">R$ 16,00</span>
+            <button class="btn adicionar-carrinho">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+    
+    
+          </div>
+        </section>
 
     <div id="notificacao" class="notificacao hidden">
       Produto adicionado ao carrinho!

@@ -32,12 +32,6 @@ function mostrarNotificacao(texto = "Produto adicionado ao carrinho!") {
   }, 1500);
 }
 
-document.querySelectorAll(".adicionar-carrinho").forEach(btn => {
-  btn.addEventListener("click", () => {
-    mostrarNotificacao();
-  });
-});
-
 // Contador Carrinho Cabeçalho
 
 let totalItensCarrinho = 0;

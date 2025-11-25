@@ -447,10 +447,6 @@
   
 
   /* Foco (quando clica) */
-  .selecionar-sabor:focus {
-    border-color: var(--cor-secundaria);
-    background: var(--cinza-claro);
-  }
 
   .preco-bebida {
     padding-top: 20px;
@@ -589,3 +585,4 @@
   }
 
 }
+
