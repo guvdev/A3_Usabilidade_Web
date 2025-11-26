@@ -1,8 +1,6 @@
   :root {
     --cor-principal: #ff4d4d;
-    /* vermelho suculento */
     --cor-secundaria: #ffb84d;
-    /* laranja apetitoso */
     --cor-fundo: #fff7f0;
     --cinza-claro: #fff0e6;
     --sombra: rgba(0, 0, 0, 0.15);
@@ -26,12 +24,10 @@
   /* CABEÇALHO */
   header {
     position: fixed;
-    /* fixa no topo */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* garante que fique acima de outros elementos */
     background: var(--cor-principal);
     color: #fff;
     padding: 1rem 0;
@@ -146,8 +142,6 @@
     padding: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-
-    /* NOVOS ajustes para alinhamento */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -174,12 +168,9 @@
   .produto h3 {
     display: flex;
     flex-direction: column;
-    /* empilha o título e a badge */
     align-items: center;
-    /* centraliza horizontalmente */
     justify-content: center;
     gap: 0.3rem;
-    /* espaçamento entre o título e a badge */
     margin-top: 1rem;
     color: var(--cor-principal);
     font-size: 1.25rem;
@@ -190,14 +181,12 @@
     font-size: 0.95rem;
     margin: 0.5rem 0 1rem;
     flex-grow: 1;
-    /* permite que o texto ocupe o espaço do meio */
   }
 
   .preco {
     font-weight: 700;
     color: #000;
     margin-top: auto;
-    /* empurra o preço e botão pro final */
   }
 
   .produto .btn {
@@ -224,22 +213,16 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -60%);
-    /* começa um pouco acima */
-
     background: #ffffff;
     color: #222;
     padding: 18px 26px;
     border-radius: 14px;
-
     font-size: 18px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-
     box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.50);
-
     opacity: 0;
     pointer-events: none;
-    /* evita clique acidental */
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 99999;
   }
@@ -248,7 +231,6 @@
   .notificacao.mostrar {
     opacity: 1;
     transform: translate(-50%, -50%);
-    /* anima de cima para o centro */
   }
 
 
@@ -268,7 +250,6 @@
   }
 
   /* Contador Carrinho cabeçalho*/
-
   .contador-carrinho {
     position: absolute;
     top: -6px;
@@ -297,15 +278,12 @@
     position: relative;
   }
 
-  /* ========================= */
-  /*      CARRINHO LATERAL     */
-  /* ========================= */
 
+  /*      CARRINHO LATERAL     */
   .carrinho-lateral {
     position: fixed;
     top: 0;
     right: -380px;
-    /* escondido */
     width: 350px;
     height: 100vh;
     background: #ffffff;
@@ -319,7 +297,6 @@
 
   .carrinho-lateral.ativo {
     right: 0;
-    /* aparece */
   }
 
   .fechar-carrinho {
@@ -350,21 +327,16 @@
   /* nome do produto (primeiro filho) ocupa espaço disponível e pode quebrar */
   .item-carrinho>span {
     flex: 1;
-    /* ocupa espaço restante */
     margin-right: 10px;
-    /* distancia do preço */
     overflow: hidden;
     text-overflow: ellipsis;
-    /* opcional: mostra "..." quando estoura */
   }
 
   /* preço: nunca quebra linha e não encolhe */
   .item-carrinho>strong,
   .item-carrinho .preco {
     white-space: nowrap;
-    /* não permite quebra de linha no preço */
     flex-shrink: 0;
-    /* não encolher para caber */
     margin-left: 10px;
     font-weight: 700;
     color: #000;
@@ -461,9 +433,8 @@
     background-size: 18px;
   }
 
-  /* =============================== */
+  
 /*   RESPONSIVIDADE MOBILE (final) */
-/* =============================== */
 
 @media (max-width: 768px) {
 

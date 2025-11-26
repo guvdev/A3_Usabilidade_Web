@@ -1,7 +1,4 @@
-/* =============================== */
 /*        VARIÁVEIS GLOBAIS        */
-/* =============================== */
-
 :root {
   --cor-principal: #ff4d4d; 
   --cor-secundaria: #ffb84d; 
@@ -18,10 +15,7 @@
   --espaco: 1rem;
 }
 
-/* =============================== */
 /*           RESET GLOBAL          */
-/* =============================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -35,10 +29,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* =============================== */
 /*          LAYOUT GERAL           */
-/* =============================== */
-
 .container {
   max-width: 1200px;
   margin: auto;
@@ -48,10 +39,7 @@ body {
   align-items: flex-start;
 }
 
-/* =============================== */
 /*       BOTÃO VOLTAR AO MENU      */
-/* =============================== */
-
 .voltar {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -70,10 +58,7 @@ body {
   background: #e63e3e;
 }
 
-/* =============================== */
 /*        CARTÃO PRINCIPAL         */
-/* =============================== */
-
 .main-card {
   background: var(--cor-card);
   padding: 2rem;
@@ -131,10 +116,7 @@ textarea {
   gap: 1rem;
 }
 
-/* =============================== */
 /*       BOTÃO FINALIZAR           */
-/* =============================== */
-
 .btn-finalizar {
   width: 100%;
   padding: 0.9rem;
@@ -152,10 +134,7 @@ textarea {
   background: #e63e3e;
 }
 
-/* =============================== */
 /*         RESUMO LATERAL          */
-/* =============================== */
-
 .side-card {
   width: 320px;
   background: var(--cor-card);
@@ -184,10 +163,7 @@ textarea {
   padding: 10px;
 }
 
-/* =============================== */
 /*       MODAL DE SUCESSO          */
-/* =============================== */
-
 .sucesso {
   position: fixed;
   top: 0;
@@ -240,18 +216,16 @@ textarea {
 }
 
 @media (max-width: 768px) {
-
-  /* Preenche a tela e centraliza tudo */
   body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background: #f5f5f5; /* leve, elegante */
+    background: #f5f5f5;
   }
 
-  /* Container principal mais agradável e centralizado */
+  /* Container principal */
   .container {
     width: 100%;
     max-width: 420px;
@@ -265,7 +239,7 @@ textarea {
     gap: 1.2rem;
   }
 
-  /* Inputs e selects mais confortáveis */
+  /* Títulos */
   .container input,
   .container select {
     width: 100%;
@@ -286,7 +260,7 @@ textarea {
     outline: none;
   }
 
-  /* Botão bonito e agradável ao toque */
+  /* Botão de finalizar */
   .container button {
     width: 100%;
     padding: 1rem;
@@ -313,34 +287,27 @@ textarea {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -60%);
-    /* começa um pouco acima */
-
     background: #ffffff;
     color: #222;
     padding: 18px 26px;
     border-radius: 14px;
-
     font-size: 18px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-
     box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.50);
-
     opacity: 0;
     pointer-events: none;
-    /* evita clique acidental */
     transition: opacity 0.4s ease, transform 0.4s ease;
     z-index: 99999;
   }
 
-  /* Quando ativa */
+  /* Classe para mostrar a notificação */
   .notificacaopg.mostrar {
     opacity: 1;
     transform: translate(-50%, -50%);
-    /* anima de cima para o centro */
   }
-
-
+  
+/* Classe para esconder elementos */
   .hidden {
     display: none;
   }

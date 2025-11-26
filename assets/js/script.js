@@ -2,19 +2,15 @@
 // Carregar carrinho salvo ao abrir a página
 document.addEventListener("DOMContentLoaded", () => {
   itensCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
-  // Atualiza tudo normalmente
   atualizarCarrinho();
-
-  // FORÇA O BADGE A APARECER NA INICIALIZAÇÃO
-  const badge = document.getElementById("contador-carrinho");
+  // Atualiza o contador do carrinho no cabeçalho
+  const badge = document.getElementById("contador-carrinho");//
   badge.style.transform = "scale(1)";
 });
 
 
 
-//Função de notificação (ADICIONADO AO CARRINHO COM SUCESSO)
-
+//Função de notificação
 function mostrarNotificacao(texto = "Produto adicionado ao carrinho!") {
   const notif = document.getElementById("notificacao");
 
@@ -32,10 +28,9 @@ function mostrarNotificacao(texto = "Produto adicionado ao carrinho!") {
   }, 1500);
 }
 
-// Contador Carrinho Cabeçalho
-
 let totalItensCarrinho = 0;
 
+// Função para atualizar o contador do carrinho
 function atualizarContadorCarrinho() {
   const badge = document.getElementById("contador-carrinho");
 
@@ -50,7 +45,6 @@ function atualizarContadorCarrinho() {
 }
 
 //Quando clicar em “Adicionar ao Carrinho”, somar 1
-
 document.querySelectorAll(".adicionar-carrinho").forEach(btn => {
   btn.addEventListener("click", () => {
 
@@ -103,7 +97,7 @@ document.querySelectorAll(".adicionar-carrinho").forEach((btn) => {
     const existente = itensCarrinho.find(
       (item) => item.nome === nome && item.sabor === sabor
     );
-
+    // Se existir, só aumento a quantidade
     if (existente) {
       existente.quantidade++;
     } else {
@@ -124,7 +118,7 @@ function atualizarCarrinho() {
   listaCarrinho.innerHTML = "";
 
   let total = 0;
-
+  // Adiciona cada item do carrinho na lista
   itensCarrinho.forEach((item) => {
     total += item.preco * item.quantidade;
 
@@ -143,40 +137,37 @@ function atualizarCarrinho() {
 
   <strong>R$ ${(item.preco * item.quantidade).toFixed(2).replace(".", ",")}</strong>
 `;
+    // Adiciona evento ao botão limpar carrinho
     document.getElementById("limpar-carrinho").addEventListener("click", () => {
       itensCarrinho = [];
       atualizarCarrinho();
     });
     listaCarrinho.appendChild(div);
   });
-
+  // Atualiza o total
   totalCarrinhoEl.textContent = total.toFixed(2).replace(".", ",");
   // Salva no localStorage sempre que o carrinho for atualizado
   localStorage.setItem("carrinho", JSON.stringify(itensCarrinho));
 
 }
-
+// ----------- CONTROLE DE QUANTIDADE -----------
 listaCarrinho.addEventListener("click", (e) => {
   // BOTÃO "+"
   if (e.target.classList.contains("mais")) {
     const nome = e.target.dataset.nome;
     const item = itensCarrinho.find(x => x.nome === nome);
-
     item.quantidade++;
     atualizarCarrinho();
   }
-
   // BOTÃO "−"
   if (e.target.classList.contains("menos")) {
     const nome = e.target.dataset.nome;
     const item = itensCarrinho.find(x => x.nome === nome);
-
     if (item.quantidade > 1) {
       item.quantidade--;
     } else {
       itensCarrinho = itensCarrinho.filter(x => x.nome !== nome);
     }
-
     atualizarCarrinho();
   }
 });
