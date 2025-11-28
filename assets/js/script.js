@@ -1,6 +1,7 @@
 
 // Carregar carrinho salvo ao abrir a página
-document.addEventListener("DOMContentLoaded", () => {
+// -> Recupera os itens do carrinho que estavam salvos no localStorage e atualiza o carrinho ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {//DOm: Objeto do modelo de documento
   itensCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
   atualizarCarrinho();
   // Atualiza o contador do carrinho no cabeçalho
@@ -9,17 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 //Função de notificação
 function mostrarNotificacao(texto = "Produto adicionado ao carrinho!") {
   const notif = document.getElementById("notificacao");
-
   notif.textContent = texto;
   notif.classList.remove("hidden");
-
-  // Reinicia animação
   void notif.offsetWidth;
-
   notif.classList.add("mostrar");
 
   setTimeout(() => {
@@ -33,7 +29,7 @@ let totalItensCarrinho = 0;
 // Função para atualizar o contador do carrinho
 function atualizarContadorCarrinho() {
   const badge = document.getElementById("contador-carrinho");
-
+  // Atualiza o texto do badge
   badge.textContent = totalItensCarrinho;
   if (totalItensCarrinho > 0) {
     badge.style.transform = "scale(1)";
@@ -57,6 +53,7 @@ document.querySelectorAll(".adicionar-carrinho").forEach(btn => {
   });
 });
 
+//Declara constantes e variáveis
 const iconeCarrinho = document.querySelector(".icone-carrinho");
 const contadorCarrinho = document.getElementById("contador-carrinho");
 const carrinhoLateral = document.getElementById("carrinho-lateral");

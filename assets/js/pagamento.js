@@ -35,7 +35,7 @@ function finalizarPedido() { // Pega valores do formulário
     const pagamento = document.getElementById("pagamento").value.trim();
     const obs = document.getElementById("observacoes").value.trim();
 
-    if (!nome || !telefone || !rua || !numero || !bairro || !pagamento) {
+    if (!nome || !telefone || !rua || !numero || !bairro || !pagamento) {// Verifica campos obrigatórios
         mostrarNotificacaopg("Por favor, preencha todos os campos obrigatórios antes de finalizar o pedido.");
         return;
     }
@@ -45,7 +45,7 @@ function finalizarPedido() { // Pega valores do formulário
         return;
     }
 
-    const itens = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const itens = JSON.parse(localStorage.getItem("carrinho")) || [];// Recupera itens do carrinho
 
     if (itens.length === 0) {// Verifica se o carrinho está vazio
         mostrarNotificacaopg("Seu carrinho está vazio.");
@@ -79,7 +79,7 @@ function finalizarPedido() { // Pega valores do formulário
     *Observações:* ${obs || "Nenhuma"}`;
 
     const texto = encodeURIComponent(mensagem);
-    const telefoneLoja = "5548992324437";
+    const telefoneLoja = "5548985005629";
     document.getElementById("sucesso").style.display = "flex";
     setTimeout(() => {
         window.open(`https://wa.me/${telefoneLoja}?text=${texto}`, "_blank");
